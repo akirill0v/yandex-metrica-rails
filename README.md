@@ -1,4 +1,6 @@
 # Yandex::Metrika::Rails
+[![Coverage
+Status](https://coveralls.io/repos/saratovsource/yandex-metrika-rails/badge.png?branch=master)](https://coveralls.io/r/saratovsource/yandex-metrika-rails)
 
 TODO: Write a gem description
 
