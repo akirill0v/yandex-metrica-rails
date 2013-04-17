@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Yandex::Metrika::Rails::VERSION
   spec.authors       = ["Kirillov Alexander"]
   spec.email         = ["saratovsource@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Rails 3 helpers to manage Yandex Metrika and other services.}
+  spec.summary       = %q{Rails 3 helpers to manage Yandex Metrika and other services.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
