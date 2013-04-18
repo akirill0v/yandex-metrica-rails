@@ -1,7 +1,7 @@
 <script type="text/javascript">
 (function (d, w, c) {
     (w[c] = w[c] || []).push(function() {
-      try { w.<%= counter_name %> = new Ya.Metrika(<%= counter_options %>);
+      try { w.<%= counter_name %> = new Ya.Metrika({<%= counter_options %>});
       } catch(e) { }
     });
 
@@ -18,5 +18,5 @@
 })(document, window, "yandex_metrika_callbacks");
 </script>
 <% if noscript %>
-  <noscript><div><img src="//mc.yandex.ru/watch/<%= counter %>" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<noscript><div><img src="//mc.yandex.ru/watch/<%= counter %>" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <% end %>
