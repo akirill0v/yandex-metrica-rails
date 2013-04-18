@@ -5,7 +5,7 @@ require 'yandex-metrika/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "yandex-metrika-rails"
-  spec.version       = Yandex::Metrika::Rails::VERSION
+  spec.version       = YandexMetrika::VERSION
   spec.authors       = ["Kirillov Alexander"]
   spec.email         = ["saratovsource@gmail.com"]
   spec.description   = %q{Rails 3 helpers to manage Yandex Metrika and other services.}

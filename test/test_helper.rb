@@ -1,5 +1,6 @@
-require 'bundler/setup'
-require 'active_record'
+require 'rubygems'
+require 'yandex-metrika-rails'
+require 'test/unit'
 require 'simplecov'
 require 'coveralls'
 Coveralls.wear!
@@ -7,6 +8,6 @@ Coveralls.wear!
 ENV["COVERAGE"] = "true"
 SimpleCov.start if ENV["COVERAGE"]
 
-Bundler.require
-
-MiniTest::Unit.autorun
+YM.counter = "123"
+class TestCase < MiniTest::Unit::TestCase
+end
