@@ -9,10 +9,10 @@ module YandexMetrika
     autoload :TemplateOptions, 'yandex-metrika/counter/template_options'
 
     def initialize(args = {})
-      @counter_types ||= []
+      @options_types ||= []
       prepare_view_options(args)
       append_counter_types(args)
-      @options_renderer = YandexMetrika::Counter::Renderer.new(@counter_types)
+      @options_renderer = YandexMetrika::Counter::Renderer.new(@options_types)
     end
 
     def to_s
@@ -38,8 +38,9 @@ module YandexMetrika
     end
 
     def append_counter_types(args = {})
+      @options_types << Kind.new(:id, YM.counter)
       args.each do |k,v|
-        @counter_types << Kind.new(k,v)
+        @options_types << Kind.new(k,v)
       end
     end
   end

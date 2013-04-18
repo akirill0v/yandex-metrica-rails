@@ -7,6 +7,10 @@ class ViewHelpersTest < TestCase
   def test_showl_have_default_options
     metrika_init_script = metrika_init
     assert_match %r{w\.yaCounter}, metrika_init_script
+    assert_match %r{id:#{YM.counter}}, metrika_init_script
+    assert_match %r{webvisor:true}, metrika_init_script
+    assert_match %r{trackLinks:true}, metrika_init_script
+    assert_match %r{clickmap:true}, metrika_init_script
     assert_match %r{\<\/noscript\>}, metrika_init_script
   end
 
