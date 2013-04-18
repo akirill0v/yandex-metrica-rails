@@ -1,3 +1,4 @@
+require "yandex-metrica/rails/view_helpers"
 module YandexMetrica::Rails
   class Railtie < ::Rails::Railtie
     initializer "yandex-metrica-rails" do
