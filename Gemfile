@@ -5,4 +5,5 @@ gemspec
 
 gem 'tconsole'
 gem 'simplecov'
+gem 'activesupport'
 gem 'coveralls', require: false
