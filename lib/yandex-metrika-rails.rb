@@ -25,8 +25,21 @@ module YandexMetrika
       counter.nil? || counter == ""
     end
 
-    def defaults
+    def set_counters(*counters)
+      counters.each{|c| add_counter(c)}
+    end
+
+    def add_counter(counter)
+      @options ||= {}
+      @options[counter] = true
+    end
+
+    def options
       @options ||= DEFAULTS
+    end
+
+    def reset!
+      @options = nil
     end
   end
 
