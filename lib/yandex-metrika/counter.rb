@@ -16,6 +16,7 @@ module YandexMetrika
     end
 
     def to_s
+      return if YM.invalid_counter?
       template_name = @async ? "async" : "sync"
       @template ||= ::ERB.new ::File.read ::File.expand_path("../templates/#{template_name}.erb", __FILE__)
       @template.result(template_options.instance_eval { binding }).html_safe
@@ -33,7 +34,8 @@ module YandexMetrika
 
     def prepare_view_options(args)
       @local = args.delete(:local) || false
-      @async = args.delete(:async) || true
+      @async = true
+      @async = args.delete(:async) if args.include? :async
       @noscript = args.delete(:noscript) || true
     end
 

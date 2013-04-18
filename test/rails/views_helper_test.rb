@@ -4,6 +4,11 @@ require "yandex-metrika/rails/view_helpers"
 class ViewHelpersTest < TestCase
   include YandexMetrika::Rails::ViewHelpers
 
+  def setup
+    YM.counter = 123
+    YM.reset!
+  end
+
   def test_showl_have_default_options
     metrika_init_script = metrika_init
     assert_match %r{w\.yaCounter}, metrika_init_script
@@ -38,5 +43,4 @@ class ViewHelpersTest < TestCase
     metrika_init_script = metrika_init(accurateTrackBounce: true)
     assert_match %r{accurateTrackBounce:true}, metrika_init_script
   end
-
 end
