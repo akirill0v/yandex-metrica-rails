@@ -1,4 +1,4 @@
-module YandexMetrika
+module YandexMetrica
   class Counter::Renderer
     attr_reader :counter_types_collection
     DELIMITER = ', '

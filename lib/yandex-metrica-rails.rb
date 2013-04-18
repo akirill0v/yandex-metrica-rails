@@ -1,7 +1,7 @@
-require 'yandex-metrika/version'
-require 'yandex-metrika/counter'
+require 'yandex-metrica/version'
+require 'yandex-metrica/counter'
 
-module YandexMetrika
+module YandexMetrica
   DEFAULTS = {
     webvisor: true,
     clickmap: true,
@@ -45,8 +45,8 @@ module YandexMetrika
 
 end
 
-YM = YandexMetrika
+YM = YandexMetrica
 if defined?(Rails)
-  require 'yandex-metrika/rails/railtie'
-  YMR = YandexMetrika::Rails
+  require 'yandex-metrica/rails/railtie'
+  YMR = YandexMetrica::Rails
 end

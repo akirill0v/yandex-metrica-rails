@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'yandex-metrika-rails'
+require 'yandex-metrica-rails'
 require 'test/unit'
 require 'simplecov'
 require 'coveralls'

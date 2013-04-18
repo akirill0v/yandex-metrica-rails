@@ -1,18 +1,18 @@
 require 'active_support/core_ext/string/output_safety'
 require 'erb'
-module YandexMetrika
+module YandexMetrica
   class Counter
     attr_reader :local, :counter_types, :noscript, :async
 
-    autoload :Kind, 'yandex-metrika/counter/kind'
-    autoload :Renderer, 'yandex-metrika/counter/renderer'
-    autoload :TemplateOptions, 'yandex-metrika/counter/template_options'
+    autoload :Kind, 'yandex-metrica/counter/kind'
+    autoload :Renderer, 'yandex-metrica/counter/renderer'
+    autoload :TemplateOptions, 'yandex-metrica/counter/template_options'
 
     def initialize(args = {})
       @options_types ||= []
       prepare_view_options(args)
       append_counter_types(args)
-      @options_renderer = YandexMetrika::Counter::Renderer.new(@options_types)
+      @options_renderer = YandexMetrica::Counter::Renderer.new(@options_types)
     end
 
     def to_s

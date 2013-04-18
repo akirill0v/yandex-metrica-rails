@@ -1,4 +1,4 @@
-module YandexMetrika
+module YandexMetrica
   class Counter::Kind
     attr_reader :name, :value
     def initialize(name, value)

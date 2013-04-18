@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'yandex-metrika/version'
+require 'yandex-metrica/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "yandex-metrika-rails"
-  spec.version       = YandexMetrika::VERSION
+  spec.name          = "yandex-metrica-rails"
+  spec.version       = YandexMetrica::VERSION
   spec.authors       = ["Kirillov Alexander"]
   spec.email         = ["saratovsource@gmail.com"]
-  spec.description   = %q{Rails 3 helpers to manage Yandex Metrika and other services.}
-  spec.summary       = %q{Rails 3 helpers to manage Yandex Metrika and other services.}
+  spec.description   = %q{Rails 3 helpers to manage Yandex Metrica and other services.}
+  spec.summary       = %q{Rails 3 helpers to manage Yandex Metrica and other services.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
