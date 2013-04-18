@@ -2,6 +2,11 @@ require 'yandex-metrika/version'
 require 'yandex-metrika/counter'
 
 module YandexMetrika
+  DEFAULTS = {
+    webvisor: true,
+    clickmap: true,
+    trackLinks: true
+  }
 
   class << self
     def counter
@@ -18,6 +23,10 @@ module YandexMetrika
 
     def invalid_counter?
       counter.nil? || counter == ""
+    end
+
+    def defaults
+      @options ||= DEFAULTS
     end
   end
 

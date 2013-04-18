@@ -38,6 +38,7 @@ module YandexMetrika
     end
 
     def append_counter_types(args = {})
+      args = YM.defaults.merge(args)
       @options_types << Kind.new(:id, YM.counter)
       args.each do |k,v|
         @options_types << Kind.new(k,v)
