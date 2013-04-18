@@ -19,6 +19,11 @@ class ViewHelpersTest < TestCase
     assert_match %r{\<\/noscript\>}, metrika_init_script
   end
 
+  def test_metrica_should_not_have_noscript_tag
+    metrika_init_script = metrika_init(noscript: false)
+    refute_match %r{\<\/noscript\>}, metrika_init_script
+  end
+
   def test_metrica_should_have_webvisor
     metrika_init_script = metrika_init(webvisor: true)
     assert_match %r{webvisor:true}, metrika_init_script

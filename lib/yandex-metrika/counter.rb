@@ -28,7 +28,8 @@ module YandexMetrika
     def template_options
       TemplateOptions.new({
         counter_name: "yaCounter#{YM.counter}",
-        counter_options: @options_renderer.to_s
+        counter_options: @options_renderer.to_s,
+        noscript: @noscript
       })
     end
 
@@ -36,7 +37,8 @@ module YandexMetrika
       @local = args.delete(:local) || false
       @async = true
       @async = args.delete(:async) if args.include? :async
-      @noscript = args.delete(:noscript) || true
+      @noscript = true
+      @noscript = args.delete(:noscript) if args.include? :noscript
     end
 
     def append_counter_types(args = {})

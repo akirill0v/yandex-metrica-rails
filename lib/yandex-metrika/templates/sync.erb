@@ -3,4 +3,6 @@
 try { var <%= counter_name %> = new Ya.Metrika(<%= counter_options %>);
 } catch(e) { }
 </script>
-<noscript><div><img src="//mc.yandex.ru/watch/<%= counter %>" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<% if noscript %>
+  <noscript><div><img src="//mc.yandex.ru/watch/<%= counter %>" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<% end %>

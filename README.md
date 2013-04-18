@@ -40,6 +40,16 @@ Or synchronously...
 
     = metrika_init(async: false)
 
+#### Available settings:
+
+    = metrika_init(async: false, clickmap: true, noscript: false)
+
+`webvisor`   : WebVisor
+`clickmap`   : Click map
+`trackLinks` : External links, file downloads and "Share" button report
+`trackHash`  : Hash tracking in the browser address window
+`accurateTrackBounce` : Accurate bounce rate
+`noscript`   : Show `noscript` tag at the page. `true` by default.
 
 ## Contributing
 
