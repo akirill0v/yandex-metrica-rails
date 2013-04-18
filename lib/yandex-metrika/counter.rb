@@ -1,7 +1,10 @@
 module YandexMetrika
   class Counter
-    autoload :Kind, 'yandex-metrika/counter/kind'
     attr_reader :local, :counter_types
+
+    autoload :Kind, 'yandex-metrika/counter/kind'
+    autoload :Renderer, 'yandex-metrika/counter/renderer'
+
     def initialize(options = {})
       @local = options.delete(:local) || false
       @counter_types ||= []
@@ -9,7 +12,8 @@ module YandexMetrika
     end
 
     def to_s
-      @counter_types.map{|i| i.to_s}.join
+      options_renderer = YandexMetrika::Counter::Renderer.new(@counter_types)
+      options_renderer.render
     end
 
     protected
